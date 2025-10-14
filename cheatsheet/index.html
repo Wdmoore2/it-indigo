@@ -6,6 +6,9 @@
     <meta name="description" content="HTML Cheatsheet"/>
     <meta name="author" content="Will Moore">
     <title>HTML Cheatsheet</title>
+    <style>
+        input, textarea, label { display: block; }
+    </style>
 </head>
 <body>
 <h1>HTML5 Cheatsheet</h1>
@@ -42,16 +45,16 @@
 <dd>Description for Term 2</dd>
 <dt>Term 3</dt>
 <dd>Description for Term 3</dd>
-    </dl>
-</section>
-<secton id="quotes">
+<section id="quotes">
     <h2>Quotes</h2>
     <h3> Block Quotes</h3>
     <blockquote cite="https://www.example.com">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nihil tempore illo mollitia omnis debitis perspiciatis ullam optio porro nesciunt, soluta nemo necessitatibus maiores perferendis. <Cite> Words fo wisdom by professor fo T.Wallace</Cite>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nihil tempore illo mollitia omnis debitis perspiciatis ullam optio porro nesciunt, soluta nemo necessitatibus maiores perferendis. <cite> Words of wisdom by professor T.Wallace</cite>
     </blockquote>
     <h3>Inline Quote</h3>
     <p>According to <q cite="https://www.example.com">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nihil tempore illo mollitia omnis debitis perspiciatis ullam optio porro nesciunt, soluta nemo necessitatibus maiores perferendis.</q> this is a quote within a paragraph.</p>
+
+</section>
 
 </section>
 <section id="hyperlinks">
@@ -63,8 +66,6 @@
 
 <li><a href="https://en.wikipedia.org/wiki/Kitten#Nutrition">Anchor Link</a></li>
 <li><a href="mailto:wdmoore@ualr.edu">Email Link</a></li>
-    </ul>
-</section>
 <section id="table">
     <h2>Table</h2>
     <table border="1"> 
@@ -78,8 +79,29 @@
         <tr> <td>Food</td><td>2</td><td>$10</td></tr>
         <tr> <td>Food</td><td>2</td><td>$10</td></tr>
     </table>
-<img src="/cheatsheet/assets/img/kitten.jpeg" alt="cute white kitten"/> 
+    <img src="/cheatsheet/assets/img/kitten.jpeg" alt="cute white kitten"/> 
+</section>
 
+<section id="forms">
+    <form action="processing-script.php" method="post">
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="cust-name">Customer Name:</label>
+        <input type="text" id="cust-name" name="cust-name"/>
+        <label for="address"> Address:</label>
+        <textarea id="address" name="address"></textarea>
+        <label for="fav-color">Favorite Color:</label>
+        <select id="fav-color" name="fav-color">
+            <option> red</option>
+            <option> blue</option>
+            <option> green</option>
+            <option selected>---</option>
+            <input type="submit" value="Click If You Dare">
+            </select>
+      </fieldset>
+    </form>
+</section>
+</section>
  </section>  
 
 </body>
