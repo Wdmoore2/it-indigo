@@ -4,6 +4,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+/* --------Utility Classes ----------*/
+
+.container{
+  margin: auto;
+  padding: 40px;
+ }
 
 
 body {
@@ -11,14 +17,51 @@ body {
   font-family: "MedievalSharp", cursive;
 }
 main { 
-background-color: linear-gradient(to right, #5B8CAA,#FFAA33,#BF9356);
-width: 80vw;
-margin-top: 40px;
-margin-bottom: 40px;
-margin-right: auto;
-margin-left: auto;
-padding: 20px;
-border: 2px solid #000000;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: linear-gradient(to right, #5B8CAA, #FFAA33, #BF9356);
+  width: 80vw;
+  max-width:980px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+header.primary{
+  background: linear-gradient(to right, #5B8CAA, #FFAA33, #BF9356);
+  padding: 20px;
+  background-image: url("../img/bg_1.webp");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+border: 1px, solid #BF9356;
+display: flex;
+}
+
+header.primary nav{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+list-style-type: none;
+}
+div.hgroup a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #000;
+  text-align: left;
+}
+div.hgroup h2{
+  color: #ffffff;
+  text-shadow: 2px 2px #000;
+  font-size: 1.5rem;
+}
+.hgroup h1, hgroup h2{
+  margin: 0;
+  padding: 0;
+  
 }
