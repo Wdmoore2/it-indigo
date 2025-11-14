@@ -1,0 +1,4 @@
+
+$( "#EmployeeForm" ).validate({
+
+});

@@ -6,22 +6,33 @@
     <meta name="author" content="Will Moore">
   <link href="assets/css/style.css" rel="stylesheet" />
     <title>Bruce's Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+   
 </head>
 <body>
 
+
     <h1>New Patient Registration</h1>
+    <script src="script.js"></script>
     <p>Please fill out the form below</p>
 
     <form action="https://brucebauer.info/assets/ITEC3650/datadump.php" method="post">
 
         <label class="formlabel" for="Name">Name:</label>
-        <input type="text" id="Name" name="Name" size="30" maxlength="30"><br>
+        <input type="text" id="Name" name="Name" size="30" maxlength="30"
+<label for="Name" class="error"></label>
+               data-rule-required="true" data-msg-required="Please enter your first name."><br>
+        <label for="Name" class="error"></label>
 
         <label class="formlabel" for="MiddleName">Middle Initial:</label>
-        <input type="text" id="MiddleName" name="MiddleInitial" size="1" maxlength="1"><br>
+        <input type="text" id="MiddleName" name="MiddleInitial" size="1" maxlength="1"
+               data-rule-required="true" data-msg-required="Please enter your middle initial."><br>
+        <label for="MiddleName" class="error"></label>
 
         <label class="formlabel" for="LastName">Last Name:</label>
-        <input type="text" id="LastName" name="LastName" size="30" maxlength="30"><br>
+        <input type="text" id="LastName" name="LastName" size="30" maxlength="30"
+               data-rule-required="true" data-msg-required="Please enter your last name."><br>
 
         <label class="formlabel" for="Email">Email:</label>
         <input type="email" id="Email" name="Email" size="30" maxlength="30" placeholder="Enter Email Address Here"><br>
@@ -125,6 +136,26 @@
         <input type="submit" value="Submit Form">
 
     </form>
+    <form id="MyFormName" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+        
+</form>
+
+<form id="MyFormName" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+        
+</form>
+<form id="MyFormName" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+        
+</form>
+<script>
+$( "#MyFormName" ).validate({
+
+});                    
+</script>      
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
 
 </body>
 </html>

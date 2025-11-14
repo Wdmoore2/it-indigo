@@ -17,6 +17,31 @@ img {
   padding: 40px;
  }
 
+ /*-------- media queries ----------*/
+@media (max-width: 768px) {
+  header.primary nav{
+    flex-direction: column;
+    width: 100%;
+  }
+  #blog .post {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "figure"
+      "header"
+      "post-content"
+      "footer";
+  }
+  aside .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 600px) {
+ header.primary nav ul li a {
+    font-size: 1.2rem;
+    display: inline-block;
+  }
+}
+
 
 body {
   background: linear-gradient(to right, #BF9356, #FFAA33, #5B8CAA);
@@ -163,4 +188,18 @@ padding:10px;
 background-image:url("../img/bg_1.webp");
 background-repeat: no-repeat;
 background-size: cover;
+}
+.widget {
+ display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
 }
