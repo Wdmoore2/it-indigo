@@ -223,16 +223,29 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
 ul {
   list-style-type: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 ul li a {
   display: block;
+  text-decoration: none;
   text-align: center;
   padding: 14px 16px;
+  border: 5px solid #e7e7e7;
+   width: 150px;
+    position: float;
+    left: 50%;
+    top: 50%;
+    margin:auto;
+    list-style: none;
+	font-size: large;
+   
+  
 }
 main { 
 background-color: linear-gradient(to right, #5B8CAA,#FFAA33,#BF9356);
@@ -245,4 +258,5 @@ padding: 20px;
 border: 2px solid #000000;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-family: "MedievalSharp", cursive;
 }
