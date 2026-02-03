@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Will Moore">
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+
+<form id="myform" novalidate>
+    <div class="formcontainer">
+        <h1>Simple Calculator</h1>
+
+        <fieldset id="detail">
+            <legend>Calculator</legend>
+            <br>
+
+            <label class="formlabel" for="Operand1">Operand 1: </label>
+            <input type="text" id="Operand1" name="Operand1" size="15">
+            <label class="error" id="Operand1Error"></label>
+            <br><br>
+
+            <label class="formlabel">Operator: </label>
+            <div id="operatorGroup">
+                <label>
+                    <input type="radio" name="Operator" value="+"> +
+                </label>
+                <label>
+                    <input type="radio" name="Operator" value="-"> −
+                </label>
+                <label>
+                    <input type="radio" name="Operator" value="*"> ×
+                </label>
+                <label>
+                    <input type="radio" name="Operator" value="/"> ÷
+                </label>
+            </div>
+            <label class="error" id="OperatorError"></label>
+            <br><br>
+
+            <label class="formlabel" for="Operand2">Operand 2: </label>
+            <input type="text" id="Operand2" name="Operand2" size="15">
+            <label class="error" id="Operand2Error"></label>
+            <br><br>
+
+            <label class="formlabel">Result: </label>
+            <span id="Result"></span>
+            <br><br>
+
+            <input type="button" value="Calculate" onclick="calculate();">
+            <input type="button" value="Clear" onclick="clearform();">
+
+        </fieldset>
+    </div>
+</form>
+
+<script src="assets/js/calculator.js"></script>
+
+</body>
+</html>
