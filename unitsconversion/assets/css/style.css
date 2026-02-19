@@ -1,0 +1,104 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    background: linear-gradient(to right, #BF9356, #FFAA33, #5B8CAA);
+    margin: 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #8B6508; 
+    border-bottom: 4px solid #8B6508;
+    padding-bottom: 5px;
+}
+
+fieldset {
+    border: 2px solid gray;
+    padding: 20px;
+    background-color: rgba(238, 238, 238, 0.9);
+    border-radius: 8px;
+    max-width: 600px;       
+    margin: 0 auto;         
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    font-weight: normal;
+}
+
+input[type="text"] {
+    width: 150px;
+    padding: 4px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    max-width: 100%;  
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #8B6508;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a87f3b;
+}
+
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    input[type="text"] {
+        width: 100%;
+    }
+}

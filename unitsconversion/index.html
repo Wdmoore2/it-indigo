@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Converter (AJAX)</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<h1>Unit Converter (AJAX)</h1>
+
+<form id="conversionForm">
+
+    <fieldset>
+        <legend>Unit Converter (AJAX)</legend>
+
+      
+        <div class="row">
+            <label>From Value:</label>
+            <input type="text" id="fromValue">
+            <span class="error" id="valueError"></span>
+        </div>
+
+      
+        <div class="row">
+            <label>From Unit:</label>
+
+            <input type="radio" name="fromUnit" value="cm"> centimeters
+            <input type="radio" name="fromUnit" value="m"> meters
+            <input type="radio" name="fromUnit" value="km"> kilometers
+            <input type="radio" name="fromUnit" value="in"> inches
+            <input type="radio" name="fromUnit" value="ft"> feet
+            <input type="radio" name="fromUnit" value="yd"> yards
+            <input type="radio" name="fromUnit" value="mi"> miles
+
+            <span class="error" id="fromUnitError"></span>
+        </div>
+
+       
+        <div class="row">
+            <label>To Unit:</label>
+
+            <input type="radio" name="toUnit" value="cm"> centimeters
+            <input type="radio" name="toUnit" value="m"> meters
+            <input type="radio" name="toUnit" value="km"> kilometers
+            <input type="radio" name="toUnit" value="in"> inches
+            <input type="radio" name="toUnit" value="ft"> feet
+            <input type="radio" name="toUnit" value="yd"> yards
+            <input type="radio" name="toUnit" value="mi"> miles
+
+            <span class="error" id="toUnitError"></span>
+        </div>
+
+       
+        <div class="row">
+            <label>To Value:</label>
+            <span id="result"></span>
+        </div>
+
+        
+        <div class="row buttons">
+            <button type="button" id="calculateBtn">Calculate</button>
+            <button type="button" id="clearBtn">Clear</button>
+        </div>
+
+    </fieldset>
+
+</form>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
