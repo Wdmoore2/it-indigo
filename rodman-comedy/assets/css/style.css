@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*--------Responsive images ----------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* --------Utility Classes ----------*/
+
+.container{
+  margin: auto;
+  padding: 40px;
+ }
+
+@media (max-width: 768px) {
+  header.primary {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+header.primary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+ 
+}
+
+header.primary h2 {
+  grid-column: 1 / -1;
+}

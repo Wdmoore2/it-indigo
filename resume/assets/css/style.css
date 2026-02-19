@@ -1,0 +1,278 @@
+/* Full Web View Enhancements */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container, header.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav ul li {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Mobile Navigation */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+/* Responsive Sections */
+#objective, #skills, #experience, #education {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  #objective, #skills, #experience, #education {
+    flex-direction: row;
+  }
+}
+
+/* Experience Section Fixes */
+.details, .personal {
+  display: none;
+}
+#experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.job {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media only screen and (min-width: 768px) {
+  #experience {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .job {
+    flex: 1 1 30%;
+    min-width: 280px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Typography Improvements */
+body {
+  font-family: "Bowlby One", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+/* Footer Fixes */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2C3E50;
+  color: white;
+}
+
+/* Base styles */
+html {
+  color: #1B2838;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  font-family: "Bowlby One", sans-serif;
+}
+
+header {
+  background-color: #2C3E50;
+}
+
+.container {
+  background: rgb(107,154,196);
+  background: radial-gradient(circle, rgba(107,154,196,1) 0%, rgba(80,113,147,0.569) 100%);
+  border: 1px solid #2C3E50;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+main {
+  padding: 1px 20px;
+}
+
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+dl {
+  display: grid;
+  grid-template: repeat(8, auto) / 8em 1fr;
+  font-size: .9rem;
+}
+
+dt {
+  font-weight: 800;
+  grid-column: 1;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--accent-color-1);
+}
+
+dd {
+  margin: 0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--accent-color-1);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.related-links a {
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.5s ease;
+  color: #fff;
+}
+
+.related-links a:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Art Carousel Styles */
+.art-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  text-decoration-color:#1B2838;
+}
+
+@media only screen and (min-width: 1024px) {
+  main.container, header.container {
+    max-width: 1200px;
+  }
+}

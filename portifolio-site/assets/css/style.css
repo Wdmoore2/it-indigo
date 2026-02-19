@@ -1,0 +1,308 @@
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body {
+  background: linear-gradient(to right, #BF9356, #FFAA33, #5B8CAA);
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: "MedievalSharp", cursive;
+  color: #222;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(0,0,0,0.25);
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFAA33;
+}
+
+/* Main container */
+main { 
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Projects container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Individual project cards */
+.project {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5B8CAA;
+  font-family: "MedievalSharp", cursive;
+  display: block;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #FFAA33;
+}
+
+/* Modern Footer Styles */
+.site-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: 'Manrope', sans-serif;
+  border-top: 3px solid #ff6f61;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  font-size: 1rem;
+}
+
+.footer-contact a {
+  color: #ff6f61;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* ---------------- Art Carousel Styles ---------------- */
+.art-carousel {
+  position: relative;
+  max-width: 800px; /* maximum width */
+  width: 90%; /* responsive width */
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  height: auto; /* let height be automatic */
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;         /* fill the carousel width */
+  height: 400px;       /* fixed reasonable height */
+  object-fit: contain;  /* maintain full image without cropping */
+  display: block;
+  border-radius: 12px;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.current-dot,
+.carousel-dot:hover {
+  background-color: #FFAA33;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 300px;
+  }
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img {
+    height: 200px;
+  }
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
+
+/* ---------------- Responsive tweaks ---------------- */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .projects-container {
+    gap: 20px;
+  }
+
+  .project {
+    max-width: 100%;
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  .carousel-slide img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-slide img {
+    max-height: 250px;
+  }
+}
