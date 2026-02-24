@@ -1,37 +1,162 @@
-html {
+* {
   box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-/*--------Responsive images ----------*/
-img {
-  max-width: 100%;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Header Hero */
+.hero {
+  background: linear-gradient(to right, #000, #1c1c1c);
+  padding: 60px 20px;
+  border-bottom: 5px solid #ff2e00;
+}
+
+/* Flex layout for logo, text, and button */
+.header-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+.logo {
+  width: 120px;
   height: auto;
 }
-/* --------Utility Classes ----------*/
 
-.container{
-  margin: auto;
-  padding: 40px;
- }
+.header-text h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
 
+.tagline {
+  color: #ff2e00;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff2e00;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #e02600;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-left: 5px solid #ff2e00;
+  padding-left: 12px;
+}
+
+/* About Section */
+.about p {
+  max-width: 800px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Tour Dates Cards */
+.tour-dates {
+  background: #181818;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #222;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #ff2e00;
+  margin-bottom: 8px;
+}
+
+/* Tickets Section */
+.tickets {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tickets button {
+  margin-top: 20px;
+  padding: 14px 35px;
+  font-size: 1rem;
+  background: #ff2e00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tickets button:hover {
+  background: #e02600;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer .credit {
+  margin-top: 10px;
+  font-style: italic;
+  color: #ff2e00;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  header.primary {
-    grid-template-columns: 1fr;
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
   }
-}
 
+  .header-text h1 {
+    font-size: 2rem;
+  }
 
-header.primary {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  gap: 20px;
- 
-}
+  h2 {
+    font-size: 1.5rem;
+  }
 
-header.primary h2 {
-  grid-column: 1 / -1;
+  .card {
+    padding: 20px;
+  }
 }
