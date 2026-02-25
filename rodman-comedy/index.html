@@ -1,68 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Rodman Comedy Tour - National Stand-Up Comedy Experience">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodman Comedy Tour</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Rodman Comedy Tour - National Stand-Up Comedy Experience"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodman Comedy Tour</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="site-grid">
+      <!-- HERO SECTION -->
+      <header class="hero">
+        <!-- HERO CONTENT GRID -->
+        <div class="hero-content container">
+          <div class="hero-grid">
+            <!-- Left Column: NAV + TEXT -->
+            <div class="hero-left">
+              <!-- NAVIGATION -->
+              <nav class="hero-nav">
+                <ul class="nav-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#tour">Tour</a></li>
+                  <li><a href="#book">Bookings</a></li>
+                </ul>
+              </nav>
 
-  <!-- Header with Logo Inline -->
-  <header class="hero">
-    <div class="container header-flex">
-      <img src="assets/img/rodlogo.avif" alt="Rodman Comedy Tour Logo" class="logo">
-      <div class="header-text">
-        <h1>Rodman Comedy Tour</h1>
-        <p class="tagline">A National Stand-Up Comedy Experience</p>
-      </div>
-      <a href="#tickets" class="btn">View Tour Dates</a>
+              <!-- HERO TEXT -->
+              <div class="hero-text">
+                <h1>Bringing That Good Funny</h1>
+                <a href="#tour" class="btn">View Tour Dates</a>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <img src="assets/img/rodmanimage.jpeg" alt="Rodman" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ABOUT SECTION -->
+      <section class="about container" id="about">
+        <h2>About the Tour</h2>
+        <p>
+          Rod Man is one of America’s most electrifying stand-up comedians,
+          known for his explosive energy, sharp storytelling, and unforgettable
+          stage presence. Rising to national prominence after winning Season 8
+          of NBC’s Last Comic Standing, Rod Man quickly established himself as a
+          powerhouse performer capable of turning everyday life into nonstop
+          laughter.
+        </p>
+      </section>
+
+      <!-- VIDEO SECTION -->
+      <section class="video container" id="video">
+        <h2>Tour Preview</h2>
+        <div class="video-grid">
+          <iframe
+            src="https://www.youtube.com/embed/oonc593mI3M"
+            frameborder="0"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- TOUR DATES -->
+      <section class="tour container" id="tour">
+        <h2>Upcoming Tour Stops</h2>
+        <button class="btn" id="locationBtn">Find Closest Show</button>
+        <div class="tour-grid">
+          <div class="card">
+            <h3>Chicago, IL</h3>
+            <p>March 15, 2026</p>
+          </div>
+          <div class="card">
+            <h3>Atlanta, GA</h3>
+            <p>March 29, 2026</p>
+          </div>
+          <div class="card">
+            <h3>Los Angeles, CA</h3>
+            <p>April 12, 2026</p>
+          </div>
+        </div>
+        <div id="closest-show"></div>
+      </section>
+
+      <!-- BOOKINGS -->
+      <section class="book container" id="book">
+        <h2>Get Tickets</h2>
+        <p>
+          Secure your seats today for one of the fastest-growing comedy tours in
+          the country.
+        </p>
+        <a href="#" class="btn">Purchase Tickets</a>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="credit">Website Designed & Developed by Will Moore</p>
+      </footer>
     </div>
-  </header>
 
-  <!-- About Section -->
-  <section class="about container">
-    <h2>About the Tour</h2>
-    <p>
-      Rodman Comedy Tour brings nationally touring comedians and rising stars 
-      to stages across the United States. From theaters to comedy clubs and 
-      special live events, we deliver unforgettable performances that keep 
-      audiences laughing night after night.
-    </p>
-  </section>
-
-  <!-- Tour Dates -->
-  <section class="tour-dates container">
-    <h2>Upcoming Tour Stops</h2>
-    <div class="card">
-      <h3>Chicago, IL</h3>
-      <p>March 15, 2026</p>
-    </div>
-    <div class="card">
-      <h3>Atlanta, GA</h3>
-      <p>March 29, 2026</p>
-    </div>
-    <div class="card">
-      <h3>Los Angeles, CA</h3>
-      <p>April 12, 2026</p>
-    </div>
-  </section>
-
-  <!-- Tickets Section -->
-  <section id="tickets" class="tickets container">
-    <h2>Get Tickets</h2>
-    <p>Secure your seats today for one of the fastest-growing comedy tours in the country.</p>
-    <button>Purchase Tickets</button>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2026 Rodman Comedy Tour | All Rights Reserved</p>
-      <p class="credit">Website Designed & Developed by Will Moore</p>
-    </div>
-  </footer>
-
-</body>
+    <script src="assets/js/location.js"></script>
+  </body>
 </html>
