@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible Carousel</title>
+  <link rel="stylesheet" href="/slick-demo-vibe/assets/css/style.css" />
+</head>
+<body>
+
+<section 
+  class="carousel" 
+  role="region"
+  aria-roledescription="carousel"
+  aria-label="Image Gallery"
+>
+
+  <div class="carousel__viewport">
+    <div class="carousel__track">
+
+      <figure
+        class="carousel__slide"
+        id="panel1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+      >
+        <img src="/slick-demo-vibe/assets/img/1.jpg" alt="Slide 1 description" />
+      </figure>
+
+      <figure
+        class="carousel__slide"
+        id="panel2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        hidden
+      >
+        <img src="/slick-demo-vibe/assets/img/2.jpg" alt="Slide 2 description" />
+      </figure>
+
+      <figure
+        class="carousel__slide"
+        id="panel3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        hidden
+      >
+        <img src="/slick-demo-vibe/assets/img/3.jpg" alt="Slide 3 description" />
+      </figure>
+
+      <figure
+        class="carousel__slide"
+        id="panel4"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        hidden
+      >
+        <img src="/slick-demo-vibe/assets/img/4.jpg" alt="Slide 4 description" />
+      </figure>
+
+    </div>
+  </div>
+
+  <button 
+    class="carousel__button prev"
+    aria-label="Previous slide"
+  >
+    &#10094;
+  </button>
+
+  <button 
+    class="carousel__button next"
+    aria-label="Next slide"
+  >
+    &#10095;
+  </button>
+
+  <div 
+    class="carousel__nav"
+    role="tablist"
+    aria-label="Slide navigation"
+  >
+
+    <button
+      id="tab1"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel1"
+      tabindex="0"
+    ></button>
+
+    <button
+      id="tab2"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel2"
+      tabindex="-1"
+    ></button>
+
+    <button
+      id="tab3"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel3"
+      tabindex="-1"
+    ></button>
+
+    <button
+      id="tab4"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel4"
+      tabindex="-1"
+    ></button>
+
+  </div>
+
+</section>
+
+<script src="/slick-demo-vibe/assets/js/scripts.js"></script>
+</body>
+</html>

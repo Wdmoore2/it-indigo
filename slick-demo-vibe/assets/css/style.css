@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+ background: linear-gradient(to right, #BF9356, #FFAA33, #5B8CAA);
+  font-family: "MedievalSharp", cursive;
+}
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  outline: none;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  touch-action: pan-y;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  user-select: none;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons */
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel__button.prev {
+  left: 10px;
+}
+
+.carousel__button.next {
+  right: 10px;
+}
+
+.carousel__button:focus {
+  outline: 2px solid white;
+}
+
+/* Dots */
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 8px;
+}
+
+.carousel__nav button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.carousel__nav button[aria-selected="true"] {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carousel__button {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
