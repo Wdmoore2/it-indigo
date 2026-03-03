@@ -1,6 +1,6 @@
 body {
-    font-family: Georgia, serif;
-    background-color: #dcdcdc;
+     background: linear-gradient(to right, #BF9356, #FFAA33, #5B8CAA);
+  font-family: "MedievalSharp", cursive;
     padding: 20px;
 }
 
