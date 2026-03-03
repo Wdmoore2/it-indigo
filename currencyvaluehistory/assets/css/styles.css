@@ -1,0 +1,52 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #dcdcdc;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    width: 180px;
+}
+
+select, input {
+    padding: 5px;
+    width: 200px;
+}
+
+.button-row {
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 15px;
+    margin-right: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.chart-container {
+    margin-top: 30px;
+}

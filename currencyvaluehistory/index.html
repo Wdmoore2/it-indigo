@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Value History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/currencyvaluehistory/assets/css/styles.css">
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Currency Value History</h1>
+
+        <form id="currencyForm">
+
+            <div class="form-row">
+                <label>Base Currency:</label>
+                <select id="baseCurrency">
+                    <option value="">Select a Currency...</option>
+                    <option value="USD">US Dollar (USD)</option>
+                    <option value="GBP">British Pound (GBP)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="JPY">Japanese Yen (JPY)</option>
+                    <option value="CAD">Canadian Dollar (CAD)</option>
+                </select>
+                <span class="error" id="baseError"></span>
+            </div>
+
+            <div class="form-row">
+                <label>Convert to Currency:</label>
+                <select id="convertCurrency">
+                    <option value="">Select a Currency...</option>
+                    <option value="USD">US Dollar (USD)</option>
+                    <option value="GBP">British Pound (GBP)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="JPY">Japanese Yen (JPY)</option>
+                    <option value="CAD">Canadian Dollar (CAD)</option>
+                </select>
+                <span class="error" id="convertError"></span>
+            </div>
+
+            <div class="form-row">
+                <label>From Date:</label>
+                <input type="date" id="fromDate">
+                <span class="error" id="fromDateError"></span>
+            </div>
+
+            <div class="form-row">
+                <label>To Date:</label>
+                <input type="date" id="toDate">
+                <span class="error" id="toDateError"></span>
+            </div>
+
+            <div class="button-row">
+                <button type="submit">Show Results</button>
+                <button type="button" id="clearBtn">Clear</button>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <div class="chart-container">
+            <canvas id="currencyChart"></canvas>
+        </div>
+
+    </div>
+
+<script src="/currencyvaluehistory/assets/js/script.js"></script>
+</body>
+</html>
