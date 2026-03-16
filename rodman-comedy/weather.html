@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Rodman Comedy Tour - Weather Forecast" />
+<meta name="author" content="Will Moore">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rodman Comedy Tour - Weather</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="site-grid">
+  <body class="weather-page"></body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <!-- NAVIGATION -->
+     <nav class="hero-nav">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#tour">Tour</a></li>
+    <li><a href="weather.html">Weather</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+          <!-- HERO TEXT -->
+          <div class="hero-text">
+            <h1>Tour Weather Forecast</h1>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/img/rodmancomedy.jpg" alt="Rodman" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- WEATHER SECTION -->
+  <section class="weather container" id="weather">
+  <section class="weather container" id="weather">
+  <h2>Tour Weather Forecast</h2>
+
+  <button class="btn" onclick="getForecast()">Click to Use Your Location</button>
+  <button class="btn" onclick="clearWeather()">Clear</button>
+
+  <p id="weatherError"></p>
+  <div id="locationInfo"></div>
+
+  <table id="forecastTable">
+    <thead>
+      <tr>
+        <th>Date / Time</th>
+        <th>Temperature (°F)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <canvas id="weatherChart"></canvas>
+</section>
+  <!-- FOOTER -->
+  <footer>
+    <p class="credit">Website Designed & Developed by Will Moore</p>
+  </footer>
+
+</div>
+
+<!-- Weather JS -->
+<script src="assets/js/weather.js"></script>
+
+</body>
+</html>
