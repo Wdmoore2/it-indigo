@@ -5,8 +5,8 @@
     <meta
       name="description"
       content="Rodman Comedy Tour - Stand-Up Comedy Experience"
-      author="Will Moore"
     />
+    <meta name="author" content="Will Moore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rodman Comedy Tour</title>
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -15,18 +15,17 @@
     <div class="site-grid">
       <!-- HERO SECTION -->
       <header class="hero">
-        <!-- HERO CONTENT GRID -->
         <div class="hero-content container">
           <div class="hero-grid">
-          
             <div class="hero-left">
               <!-- NAVIGATION -->
               <nav class="hero-nav">
                 <ul class="nav-links">
-                  <li><a href="#">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#tour">Tour</a></li>
                   <li><a href="#book">Bookings</a></li>
+                  <li><a href="contact.html">Contact</a></li>
                 </ul>
               </nav>
 
@@ -73,33 +72,37 @@
       <section class="tour container" id="tour">
         <h2>Upcoming Tour Stops</h2>
         <button class="btn" id="locationBtn">Find Closest Show</button>
+
         <div class="tour-grid">
           <div class="card">
             <h3>Chicago, IL</h3>
             <p>March 15, 2026</p>
+            <li> <a href="https://chicago.zanies.com/" >Tickets</a></li>
           </div>
           <div class="card">
             <h3>Atlanta, GA</h3>
             <p>March 29, 2026</p>
+            <li> <a href="https://www.punchline.com/"">Tickets</a></li>
           </div>
           <div class="card">
             <h3>Los Angeles, CA</h3>
             <p>April 12, 2026</p>
+            <li> <a href="https://thecomedystore.com/" >Tickets</a></li>
           </div>
         </div>
+
+        <!-- Template for closest show -->
+        <template id="show-card-template">
+          <div class="card closest-card">
+            <h3></h3>
+            <p></p>
+            <li><a target="_blank">Tickets</a></li>
+          </div>
+        </template>
+
+        <!-- Container for dynamically added closest show -->
         <div id="closest-show"></div>
       </section>
-
-      <!-- BOOKINGS -->
-      <section class="book container" id="book">
-        <h2>Get Tickets</h2>
-        <p>
-          Secure your seats today for one of the fastest-growing comedy tours in
-          the country.
-        </p>
-        <a href="#" class="btn">Purchase Tickets</a>
-      </section>
-
       <!-- FOOTER -->
       <footer>
         <p class="credit">Website Designed & Developed by Will Moore</p>

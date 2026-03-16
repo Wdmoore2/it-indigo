@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description"  content="Rodman Comedy Tour - Stand-Up Comedy Experience" />
+    <meta name="author" content="Will Moore" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodman Comedy Tour</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="site-grid">
+      <!-- HERO SECTION -->
+      <header class="hero">
+        <!-- HERO CONTENT GRID -->
+        <div class="hero-content container">
+          <div class="hero-grid">
+            <div class="hero-left">
+              <!-- NAVIGATION -->
+              <nav class="hero-nav">
+                <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#tour">Tour</a></li>
+                  <li><a href="#book">Bookings</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+
+              <!-- HERO TEXT -->
+              <div class="hero-text">
+                <h1>Bringing That Good Funny</h1>
+                <a href="#tour" class="btn">View Tour Dates</a>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <img src="assets/img/rodmancomedy.jpg" alt="Rodman" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="contact-card">
+        <h2>Contact Rodman</h2>
+        <form
+          class="contact-form"
+          id="contact-form"
+          action="https://formspree.io/f/mjgabeed"
+          method="POST"
+        >
+          <label>
+            Your Email:
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Your Message:
+            <textarea name="message"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="credit">Website Designed & Developed by Will Moore</p>
+      </footer>
+    </div>
+
+  <script src="assets/js/form.js"></script>
+  </body>
+</html>

@@ -247,6 +247,144 @@ h2 {
   animation: fadeIn 0.4s ease;
 }
 
+/* Contact Card */
+.contact-card {
+  background: #222; /* darker than body */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 50px auto; /* centers the card */
+  box-shadow: 0 0 30px rgba(255,46,0,0.5); /* neon glow */
+  text-align: left;
+}
+
+.contact-card h2 {
+  color: #ff2e00;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(255,46,0,0.7),
+               0 0 10px rgba(255,46,0,0.5);
+}
+/* ============================= */
+/* TOUR CARD STYLING (EXISTING & CLOSEST SHOW) */
+/* ============================= */
+
+/* General card style */
+.card {
+  border: 1px solid; 
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card headings (city names) */
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #000; /* default black for tour cards */
+}
+
+/* Date paragraph */
+.card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Ticket link styling */
+.card li {
+  list-style: none;
+  margin-top: 0.5rem;
+  padding-left: 0; /* remove bullet padding */
+}
+
+.card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* TOUR GRID LAYOUT */
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Closest show card spacing */
+#closest-show {
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    padding: 0.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+/* Form Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Make textarea taller */
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.contact-form button {
+  display: inline-block;
+  background: linear-gradient(90deg,#ff2e00,#ff9933);
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255,46,0,0.7);
+  background: linear-gradient(90deg,#cc2500,#ff8000);
+}
+
+
+
+
 /* subtle animation */
 @keyframes fadeIn {
   from {
@@ -276,6 +414,12 @@ footer {
 }
 
 /* RESPONSIVE */
+@media(max-width: 768px) {
+  .contact-card {
+    padding: 30px 20px;
+    margin: 30px 10px;
+  }
+}
 @media(max-width:768px){
   .hero-grid {
     grid-template-columns: 1fr;
