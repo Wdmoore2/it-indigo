@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabin Request</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <h2>Cabin Rental Request</h2>
+
+    <form id="cabinForm">
+
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Your name">
+
+        <label>Email *</label>
+        <input type="email" id="email" required>
+
+        <label>Check-in Date *</label>
+        <input type="text" id="checkin" readonly>
+
+        <label>Check-out Date *</label>
+        <input type="text" id="checkout" readonly>
+
+        <label>Adults *</label>
+        <input type="number" id="adults" min="1" value="1">
+
+        <label>Children</label>
+        <input type="number" id="children" min="0" value="0">
+
+        <label>Special Requests</label>
+        <textarea id="requests" placeholder="Firewood, pet request, late check-in, etc."></textarea>
+
+        <button type="submit">Submit Request</button>
+
+    </form>
+
+    <div id="confirmationMessage"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
