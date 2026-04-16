@@ -27,7 +27,7 @@ window.initMap = function () {
                 box-shadow:0 2px 6px rgba(0,0,0,0.3);
                 white-space:nowrap;
             ">
-                Nature's Elk Outfitters
+              Wild Buffalo River Company
             </div>
         </div>
     `;
