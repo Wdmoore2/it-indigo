@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+ <link rel="stylesheet" href="assets/css/style.css"/>
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+ <link rel="stylesheet" href="https://use.typekit.net/ehe6eed.css">
+    <title> Cabin Rentals </title>
+</head>
+
+<body id="cabin">
+   <main class="container">
+
+    <section id="title">
+
+    <div class="title-bar"></div>
+    <a href="index.html">
+    <img class="title" src="assets/img/logooo.webp" alt="turquoise sun with elf coming from left corner">
+    </a>
+    <nav id="navbar" role="navigation">
+    
+        <ul id="first">
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="dropdown">
+            <a class="dropbtn">Rentals</a>
+                <ul>
+                    <div class="dropdown-content">
+                    <li><a href="cabin.html">Cabin Rentals</a></li>
+                    <li><a href="canoe.html">Canoe Rentals</a></li>
+                    </div>
+                </ul>   
+            </li>
+
+            <li><a href="river.html">River Levels</a></li>
+            <li><a href="map.html"> Map</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="title-content">
+    <h1>Cabin Rentals</h1>
+    <p><a href="#canoeForm">Your home away from home in the heart of the woods.</a></p>
+    <ul>
+        <li><a href="#search">Our Cabins</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#cabinForm">Check Availability</a></li>
+        <li><a href="#cabin-imgs">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
+    </section>
+
+
+<section id="cabin-info">
+<h2>Cabin Rentals</h2>
+ <h3>Bear Ridge Cabin</h3>
+    <p>  Experience the ultimate retreat in our premier cabin, designed for those who want to 
+            immerse themselves in nature without sacrificing comfort.</p>
+    <h4>Key Features</h4>
+    <ul>
+        <li>Main floor and sleeping loft with queen-size bed</li>
+        <li>Complimentary WIFI</li>
+        <li>Fully furnished kitchen with dining bar</li>
+        <li>Stone walk-in shower in bathroom</li>
+        <li>Hot tub and stone firepit on patio</li>
+    </ul>
+    </section>
+
+<section id="cabin-imgs">
+ <div class="fade container">
+  <div><img src="assets/img/cabin1-400px.webp" alt="Exterior of cabin at night with fire pit in the front"></div>
+  <div><img src="assets/img/cabin2-400px.webp" alt="Bedroom in cabin with bed and wood floors and walls "></div>
+  <div><img src="assets/img/cabin3-400px.webp" alt="Cabin living room with small red couch and tv"></div>
+  <div><img src="assets/img/cabin4-400px.webp" alt="Small cabin kitchen"></div>
+</div>
+</section>
+
+        <section id="search">
+            <h2>Booking your stay</h2>
+            <p>Our mobile-friendly platform allows you to view availability and book your stay at Bear Ridge with confidence. 
+                Bear Ridge offers two guests a cozy, fully furnished cabin for a romantic getaway in upper Buffalo River country. </p>
+
+            <p>The cabin has a main floor and sleeping loft with queen-size bed.  We are pleased to offer complimentary WIFI with this cabin rental. 
+            The cabin's kitchen features a dining bar and is fully furnished with appliances, basic meal prep utensils and cookware, a coffeemaker and even a dishwasher.  
+            In the cabin's bathroom, you'll find a lovely stone walk-in shower, along with towels, soap, and shampoo. </p>
+
+            <h3>Rates</h3>
+            <ul>
+                <li>$195 per Night</li>
+                <li>$1195 per Week</li>
+            </ul>
+
+    <div class="form-container">
+
+    <h2>Cabin Rental Request</h2>
+
+    <form id="cabinForm">
+
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Your name">
+
+        <label>Email *</label>
+        <input type="email" id="email" required>
+
+        <label>Check-in Date *</label>
+        <input type="text" id="checkin" readonly>
+
+        <label>Check-out Date *</label>
+        <input type="text" id="checkout" readonly>
+
+        <label>Adults *</label>
+        <input type="number" id="adults" min="1" value="1">
+
+        <label>Children</label>
+        <input type="number" id="children" min="0" value="0">
+
+        <label>Special Requests</label>
+        <textarea id="requests" placeholder="Firewood, pet request, late check-in, etc."></textarea>
+
+        <button type="submit">Submit Request</button>
+
+    </form>
+
+    <div id="confirmationMessage"></div>
+
+</div>
+
+ </section>
+
+ 
+        <section id="amenities">
+            <h2>Amenities</h2>
+            <p>Every stay at Bear Ridge includes the following as standard:</p>
+
+           <ul>
+            <li>Hot tub and stone firepit on patio</li>
+            <li>Private creekside sitting area (Coming soon!)</li>
+            <li>Wifi (no cell service in the area)</li>
+            <li>42” TV with satellite/local channels, BluRay player, movies</li>
+            <li>Fully-equipped kitchen – microwave, dishwasher, coffeemaker, toaster</li>
+            <li>Dishes, pots and pans, cleaning supplies</li>
+            <li>All bed and bath linens</li>
+            <li>Front and back porches with seating</li>
+            <li>Outdoor gas grill</li>
+            <li>Mini-split HVAC plus electric “fireplace” heater</li>
+            <li>Parking in front of cabin</li>
+            <li>Firewood for outdoor fire pit</li>
+            <li>Convenient to the Buffalo Outdoor Center store and the Ponca Elk Education Center</li>
+            <li>Just a short drive to the Ponca Access and the Lost Valley Trailhead</li>
+            
+           </ul>
+        </section>
+
+
+        <section id="reviews">
+            <h2>Guest Experiences and Reviews</h2>
+            <blockquote>
+                "Best cabin in the Buffalo River area! We had a wonderful time and can't wait to come back."
+                <footer class="reviews">— <em>anonymous, 2025</em></footer>
+            </blockquote>
+
+            <blockquote>
+                "The hot tub was a highlight, and the fire pit made for some great evenings under the stars."
+                <footer class="reviews">— <em>anonymous, 2025</em></footer>
+            </blockquote>
+
+            <blockquote>
+                "The cabin was cozy and well-equipped, making it the perfect base for our adventures in the Buffalo River area."
+                <footer class="reviews">— <em>anonymous, 2025</em></footer>
+            </blockquote>
+        </section>
+
+
+ 
+<footer class="footer">
+        <ul>
+           <li><a href="map.html">Map and Directions</a></li>
+            <li><a href="river.html">River Levels</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <h5> Reach Out</h5>
+        <address>
+            AR-43, Compton, AR
+            36°01'33.6"N 93°21'54.6"W
+        </address>
+        <p> Phone: (501) 555-5555</p>
+        <p>&copy; Wild Buffalo River Company</p>
+
+</footer>
+
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

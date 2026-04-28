@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>River Levels</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/ehe6eed.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id="river">
+
+<main class="container">
+
+  <!-- NAV (same structure you already use) -->
+  <section id="title">
+    <div class="title-bar"></div>
+
+    <a href="index.html">
+      <img class="title" src="assets/img/logooo.webp" alt="logo">
+    </a>
+
+    <nav id="navbar">
+      <ul id="first">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a class="dropbtn">Rentals</a>
+          <ul class="dropdown-content">
+            <li><a href="cabin.html">Cabin Rentals</a></li>
+            <li><a href="canoe.html">Canoe Rentals</a></li>
+          </ul>
+        </li>
+
+        <li><a href="river.html">River Levels</a></li>
+        <li><a href="map.html">Map</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- TITLE -->
+  <h1 class="river">River Levels</h1>
+  <h2 id="chartTitle" class="river"></h2>
+
+  <!-- CARDS -->
+  <section id="cards" class="cards"></section>
+
+  <!-- CHART -->
+  <section class="chart-card">
+    <div class="chart-container">
+      <canvas id="riverChart"></canvas>
+    </div>
+  </section>
+
+</main>
+
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
