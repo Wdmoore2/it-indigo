@@ -718,211 +718,7 @@ nav ul{
     padding: 5px;
   }
 
-/* ----------------------------- Media Queries -------------------------------------*/
 
-/* home */
-
-@media screen and (min-width:768px){
-
-#home .title-content{
-  grid-area: heading;
-}
-  
-#home #navbar {
-    grid-area: nav;
-    width: 100%;
-    justify-content: space-around; /* or space-between */
-  }
-  nav{
-    width: 100%;
-  }
-body {
-    padding: 0;
-  }
-.container{
-  max-width: 900px;
-}
-
-
-  #home #title{
-    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback1200px.webp);
-    max-width: 100%;
-    grid-template-areas:
-      "img nav"
-      "heading heading"
-    ;
-  }
-}
-
-@media screen and (min-width:992px){
-  .container{
-    max-width: 2000px;
-  }
-  #cabin #title{
-    max-height: 100%;
-  }
-
-  #river #title{
-    background-image: url(../img/river1200px.webp);
-    max-width: 100%;
-  }
-
-  #map #title{
-    background-image: url(../img/mapback1200px.webp);
-    max-width: 100%;
-  }
-}
-
-
-/* cabin */
-@media screen and (min-width: 768px){
-  #cabin-imgs{
-  display: flex;
-  flex-direction: row;
-}
-
-  #cabin #title{
-    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin1200px.webp);
-    max-width: 100%;
-    grid-template-areas:
-      "img nav"
-      "heading heading"
-      "info info"
-      "imgs imgs"
-      "search search"
-      "form form"
-      "amenities amenities"
-      "reviews reviews"
-      "footer footer"
-      ;
-  }
-  
-  #title img{
-  grid-area: img;
-}
-
-#cabin #navbar{
-  grid-area: nav;
-}
-#cabin-info{
-  grid-area: info;
-  margin-left: 100px;
-}
-#cabin-info h2{
-  margin-right: 58px;
-}
-
-#cabin #search p{
-  margin-left: 75px;
-  margin-right: 75px;
-}
-
-
-#cabin #search h3, #cabin #search ul{
-  text-align: center;
-  padding: 0;
-  list-style-position: inside;
-}
-#cabin #search ul{
-  margin-bottom: 50px;
-}
-
-#cabin-imgs{
-  grid-area: imgs;
-}
-#cabin #search{
-  grid-area: search;
-}
-#cabin .form-container{
-  grid-area: form;
-}
-#cabin #amenities{
-  grid-area: amenities;
-  text-align: center;
-  list-style-position: inside;
-}
-#cabin #reviews {
-  grid-area: reviews;
-  margin-left: 75px;
-  margin-right: 75px;
-}
-footer{
-  grid-area: footer;
-}
-#cabin .title-content{
-  grid-area: heading;
-}
-}
-
-@media screen and (min-width: 768px){
-  footer h5, address, #phone{
-    margin: 35px;
-  }
-  #mission, #story, #commitment, #why{
-    margin-left: 35px;
-    margin-right: 35px;
-  }
-  #canoe #title{
-    background-image: url(../img/canoeback1200px.webp);
-    max-width: 100%;
-    grid-template-areas:
-      "img nav"
-      "heading heading"
-      "about about"
-      "rent rent"
-      "form form"
-      "shuttle shuttle"
-      "footer footer"
-      ;
-  }
-  
-  #home #first{
-  grid-area: nav;
-}
-
-#canoe #shuttle table{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-  #canoe .title-content{
-    grid-area: heading;
-  }
-  #canoe #navbar{
-    grid-area: nav;
-  }
-  #canoe #about-canoes{
-    grid-area: about;
-    background: url(../img/canoelake2000px.webp);
-    background-repeat: no-repeat;
-    max-width: 100%;
-  }
-  #canoe #rentals{
-    grid-area: rent;
-  }
-  #canoe .form-container{
-    grid-area: form;
-  }
-  #canoe #shuttle{
-    grid-area: shuttle;
-  }
-  footer{
-    grid-area: footer;
-  }
-#canoe table{
-    max-width: 340px;
-
-}
-   #canoe #rentals table{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-}
-#canoe #shuttle table{
-  margin-left: auto;
-  margin-right: auto;
-}
-}
 
 
 /* canoe */
@@ -978,4 +774,125 @@ padding: 20px;
 footer{
   grid-area: footer;
 }
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES (CLEAN FIXED VERSION)
+========================================================= */
+
+/* =========================
+   HOME BASE FIXES
+========================= */
+@media screen and (min-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  #home #title {
+    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback1200px.webp);
+    max-width: 100%;
+  }
+
+  #home #navbar {
+    grid-area: nav;
+    width: 100%;
+  }
+
+  #home .title-content {
+    grid-area: heading;
+  }
+
+  #mission,
+  #story,
+  #commitment,
+  #why {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+/* =========================
+   CANOE + CABIN + FOOTER FIXES
+========================= */
+@media screen and (min-width: 768px) {
+
+  #cabin-imgs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #cabin #title {
+    background-image: url(https://kacolter.github.io/buffalo-river/assets/img/cabin1200px.webp);
+    max-width: 100%;
+  }
+
+  #canoe #title {
+    background-image: url(../img/canoeback1200px.webp);
+    max-width: 100%;
+  }
+
+  #canoe #about-canoes {
+    background: url(../img/canoelake2000px.webp) no-repeat center;
+    max-width: 100%;
+  }
+
+  footer h5,
+  address,
+  #phone {
+    margin: 35px;
+  }
+}
+
+/* =========================
+   DESKTOP (992px+)
+========================= */
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 2000px;
+  }
+
+  #river #title {
+    max-width: 100%;
+  }
+
+  #map #title {
+    background-image: url(../img/mapback1200px.webp);
+    max-width: 100%;
+  }
+
+  #cabin #title {
+    max-height: 100%;
+  }
+}
+
+/* =========================
+   CHART + MAP + RIVER FIXES
+========================= */
+@media screen and (min-width: 768px) {
+
+  .chart-container {
+    height: 380px;
+  }
+
+  #map-canvas {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .chart-container {
+    height: 480px;
+  }
+
+  #map-canvas {
+    height: 550px;
+    max-width: 900px;
+  }
 }
