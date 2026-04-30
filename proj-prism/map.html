@@ -6,44 +6,35 @@
     <title>Google Map</title>
 
     <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="stylesheet" href="https://use.typekit.net/ehe6eed.css">
+    <link rel="stylesheet"href="https://use.typekit.net/ehe6eed.css">
 </head>
 
 <body id="map">
 
 <main class="container">
 
-    <!-- NAV -->
-    <section id="title">
-
-        <div class="title-bar"></div>
-
-        <a href="index.html">
-            <img class="title" src="assets/img/logooo.webp" alt="logo">
-        </a>
-
-        <nav id="navbar">
-            <ul id="first">
-                <li><a href="index.html">Home</a></li>
-
-                <li class="dropdown">
-                    <a class="dropbtn">Rentals</a>
-                    <ul class="dropdown-content">
-                        <li><a href="cabin.html">Cabin Rentals</a></li>
-                        <li><a href="canoe.html">Canoe Rentals</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="river.html">River Levels</a></li>
-                <li><a href="map.html">Map</a></li>
+<section id="title">
+      <img class="title" src="assets/img/logooo.webp" alt="turquoise sun with elf coming from right corner">
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <!-- Dropdown Item -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Rentals</a>
+            <ul class="dropdown-menu">
+              <li><a href="cabin.html">Cabin Rentals</a></li>
+              <li><a href="canoe.html">Canoe Rentals</a></li>
             </ul>
-        </nav>
-
+          </li>
+            <li><a href="river.html">River Levels</a></li>
+            <li><a href="map.html"> Map</a></li>
+        </ul>
+      </nav>
     </section>
+
 
     <!-- MAP SECTION -->
     <section class="map-section">
-        <h2 class="map">Find Us</h2>
 
         <!-- GOOGLE MAP RENDERS HERE -->
         <div id="map-canvas"></div>
@@ -58,11 +49,6 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <ul>
-            <li><a href="map.html">Map and Directions</a></li>
-            <li><a href="river.html">River Levels</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
 
         <h5>Reach Out</h5>
 
@@ -88,5 +74,3 @@
 
 </body>
 </html>
-
-
