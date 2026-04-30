@@ -1,16 +1,14 @@
 /* custom css properties */
 :root{
---orange: #E09041;
---coral:#E05841;
---turq: #42E0D0;
---forrest:#4D615F;
---brown:#61574D;
---taupe: #E3D0C0;
---background:#EAE4DF;
---text:#FFF;
-
+  --orange: #E09041;
+  --coral:#E05841;
+  --turq: #42E0D0;
+  --forrest:#4D615F;
+  --brown:#61574D;
+  --taupe: #E3D0C0;
+  --background:#EAE4DF;
+  --text:#FFF;
 }
-
 
 html {
   box-sizing: border-box;
@@ -22,16 +20,15 @@ html {
   box-sizing: inherit;
 }
 
-
-
+/* FIX: Consolidated single body rule — removed duplicate, reduced padding for mobile */
 body {
   font-family: "navigo", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--background);
-  margin: 0;
-  padding: 30px;
+  background: var(--taupe);
   color: #222;
+  margin: 0;
+  padding: 15px;
 }
 
 .container{
@@ -39,6 +36,7 @@ body {
   max-width: 500px;  
   margin: 0 auto;
   background-color: var(--background);
+  padding: 0 10px; /* FIX: prevents content touching screen edges on mobile */
 }
 
 p{
@@ -58,22 +56,23 @@ h1,h2,h3,h4{
   font-weight: 400;
   font-style: normal;
 }
+
 /* -------------------------------------------------------------Index and About CSS----------------------------------------------------------- */
 
 #title {
- display: grid;
- grid-template-columns: 120px auto;
- grid-template-rows: 100px auto; 
- grid-template-areas:
- "img nav"
- "heading heading";
+  display: grid;
+  grid-template-columns: 120px auto;
+  grid-template-rows: 100px auto; 
+  grid-template-areas:
+  "img nav"
+  "heading heading";
 }
 
 #home #title{
- background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback480px.webp) ;
- background-repeat: no-repeat;
- max-width: 500px;
- height: 450px;
+  background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback480px.webp);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  height: 450px;
 }
 
 #title img{
@@ -98,27 +97,27 @@ h1,h2,h3,h4{
 }
 
 #mission{
- padding: 25px;
- margin: 25px 10px 10px 10px;
- text-align: center;
+  padding: 25px;
+  margin: 25px 10px 10px 10px;
+  text-align: center;
 }
 
 #story{
-padding: 25px;
- margin: 10px;
- text-align: center;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
 }
 
 #commitment{
-padding: 25px;
- margin: 10px;
- text-align: center;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
 }
 
 #why{
-padding: 25px;
- margin: 10px 10px 25px 10px ;
- text-align: center;
+  padding: 25px;
+  margin: 10px 10px 25px 10px;
+  text-align: center;
 }
 
 #home h2{
@@ -138,29 +137,28 @@ footer ul{
   margin-right: 50px;
 }
 
-
-
-/* -------------------------------------------------------------Index and About CSS----------------------------------------------------------- */
+/* -------------------------------------------------------------Index and About CSS End----------------------------------------------- */
 
 /* -------------------------------------------Nav CSS----------------------------------------------- */
 
-/* Main Flexbox Navbar */
+/* FIX: Added flex-wrap so nav doesn't overflow on narrow screens */
 .nav-links {
   margin-top:25px;
   padding:0;
   display: flex;
+  flex-wrap: wrap;
   gap:10px;
   list-style: none;
   justify-content:flex-end; 
 }
 
 .nav-links li {
-  position: relative; /* Essential for dropdown positioning */
+  position: relative;
 }
 
 .nav-links a {
   display: block;
-  padding: 15px ;
+  padding: 15px;
   color: white;
   text-decoration: none;
 }
@@ -169,45 +167,39 @@ footer ul{
   background-color: var(--forrest);
 }
 
-/* Dropdown Menu - Hidden by default */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* Positions it directly below the nav item */
+  top: 100%;
   left: 0;
   background-color: var(--brown);
   min-width: 160px;
   list-style: none;
   padding:0;
-  z-index: 1; /* Ensures it stays on top of other content */
+  z-index: 1;
 }
 
 .dropdown-menu li {
-  width: 100%; /* Items stack vertically */
+  width: 100%;
 }
 
-/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-
-/* -------------------------------------------Nav CSS----------------------------------------------- */
-
-
+/* -------------------------------------------Nav CSS End----------------------------------------------- */
 
 /* -------------------------------------------------------------Canoe CSS----------------------------------------------------------*/
+
 #canoe .title-content{
   margin-top: 50px;
 }
 
-
-
 #canoe #title{
- background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoeback480px.webp) ;
- background-repeat: no-repeat;
- max-width: 500px;
- height: 450px;
+  background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoeback480px.webp);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  height: 450px;
 }
 
 #title img{
@@ -237,21 +229,21 @@ footer ul{
 }
 
 #about-canoes{
- background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoelake480px.webp);
- background-repeat: no-repeat;
- max-width: 500px;
- height: 400px;
+  background-image: url(https://kacolter.github.io/buffalo-river/assets/img/canoelake480px.webp);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  height: 400px;
 }
 
 #rentals{
- padding: 40px;
- margin: 20px;
+  padding: 40px;
+  margin: 20px;
 }
 
 #shuttle{
- padding: 20px;
- margin: 20px;
- text-align: center;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
 }
 
 #shuttle h3{
@@ -265,16 +257,15 @@ table{
 }
 
 #title, #about-canoes {
-  background-size: cover;      /* This ensures the image fills the box without gaps */
-  background-position: center; /* Keeps the focus of the photo in the middle */
+  background-size: cover;
+  background-position: center;
   width: 100%;
 }
 
- tr:nth-child(even){ 
-    background-color: var(--coral);
-    color:var(--text);
-
-  }
+tr:nth-child(even){ 
+  background-color: var(--coral);
+  color:var(--text);
+}
 
 tr:nth-child(odd){
   background-color: var(--background);
@@ -282,27 +273,23 @@ tr:nth-child(odd){
 }
 
 tr:hover{
-   background-color: rgba(0, 0, 0, 0.3);   
-
-    }
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 td:nth-child(n+2){
-    text-align:right;
-    }
-
+  text-align:right;
+}
 
 th{
-    background-color:var(--coral);
-    color:var(--text);
-    padding:7.5px;
-  }
+  background-color:var(--coral);
+  color:var(--text);
+  padding:7.5px;
+}
 
-    
-  
-  td, th{
+td, th{
   border:5px solid var(--background);
   padding:5px;
-  }
+}
 
 #rentals h2{
   color:var(--orange);
@@ -314,33 +301,34 @@ th{
   text-align: center;
 }
 
-/* -------------------------------------------------------------Canoe CSS----------------------------------------------------------- */
 #canoe #rentals table{
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
 }
+
 #canoe #shuttle table{
   margin-left: auto;
   margin-right: auto;
 }
+
 #title li{
   list-style-type: none;
 }
+
 .title-content ul{
   padding: 20px;
 }
 
 .title-content a{
   text-decoration: none;
-  color:var(--text)
+  color:var(--text);
 }
 
 .title-content a:hover{
- transition: color 0.7s ease;
- color:var(--turq);
+  transition: color 0.7s ease;
+  color:var(--turq);
 }
-
 
 #canoe .title-content {
   text-align: center;
@@ -348,23 +336,22 @@ th{
   padding:10px;  
 }
 
+/* -------------------------------------------------------------Canoe CSS End----------------------------------------------------------- */
 
 /* -------------------------------------------------------------Cabin CSS----------------------------------------------------------- */
 
 #cabin #title{
- background-image: url(../img/cabin.webp) ;
- background-repeat: no-repeat;
- max-width: 500px;
- height: 450px;
+  background-image: url(../img/cabin.webp);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  height: 450px;
 }
-
 
 #cabin .title-content {
   text-align: center;
   color: var(--text);
   padding:10px;  
 }
-
 
 #title img{
   grid-area: img;
@@ -379,11 +366,11 @@ th{
   margin: 0px;
 }
 
-
 #cabin-info{
   margin:20px;
   padding:10px;
 }
+
 #activities{
   margin:20px;
   padding:10px;
@@ -405,8 +392,8 @@ th{
 }
 
 #cabin h2{
- color:var(--coral);
- text-align: center;
+  color:var(--coral);
+  text-align: center;
 }
 
 #cabin h3{
@@ -425,12 +412,11 @@ th{
   max-width:100%;
 }
 
-
-
-#activities ul,#search ul,#cabin-info ul, #amenities ul{
+#activities ul, #search ul, #cabin-info ul, #amenities ul{
   list-style-type: square;
   padding: 10px;
 }
+
 #activities ul li, #search ul li, #cabin-info ul li, #amenities ul li{
   padding:5px;
 }
@@ -458,8 +444,9 @@ footer.reviews{
   color: #000;
 }
 
+/* -------------------------------------------------------------Cabin CSS End----------------------------------------------------------- */
 
-/* -------------------------------------------------------------Cabin CSS----------------------------------------------------------- */
+/* -------------------------------------------------------------Footer CSS----------------------------------------------------------- */
 
 .footer{
   background-color: var(--forrest);
@@ -478,26 +465,26 @@ address{
   gap: 10px;
   list-style-type: none;
 }
+
 .footer ul a{
   color:var(--text);
   text-decoration: none;
 }
 
 footer a:hover{
- transition: color 0.7s ease;
- color:var(--turq);
+  transition: color 0.7s ease;
+  color:var(--turq);
 }
 
+/* -------------------------------------------------------------Footer CSS End----------------------------------------------------------- */
 
-
-
-/*---------------------------------------------- River Levels CSS -----------------------------------------*/
+/* ---------------------------------------------- River Levels CSS -----------------------------------------*/
 
 #river #title{
- background-image: url(../img/river1200px.webp);
- background-repeat: no-repeat;
- max-width: 500px;
- height: 450px;
+  background-image: url(../img/river1200px.webp);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  height: 450px;
 }
 
 #river #cards, #river .chart-card{
@@ -505,31 +492,46 @@ footer a:hover{
 }
 
 h1.river { 
-  color: var(--forrest); margin: 28px 0 6px; 
+  color: var(--forrest);
+  margin: 28px 0 6px; 
   text-align:center;
 }
 
-h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forrest); }
+h2.river {
+  margin-top: 4px;
+  font-size: 1.3rem;
+  opacity: 0.8;
+  color: var(--forrest);
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px; margin: 20px 0;
+  gap: 14px;
+  margin: 20px 0;
 }
-@media (min-width: 480px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 480px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
 
 .card {
-  background: white; border-radius: var(--radius);
-  padding: 16px; box-shadow: var(--shadow);
-  cursor: pointer; text-align: center;
+  background: white;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-align: center;
   border-top: 5px solid var(--forrest);
   transition: transform var(--transition), box-shadow var(--transition);
 }
+
 .card:hover, .card:focus {
   transform: translateY(-3px);
   box-shadow: 0 14px 32px rgba(0,0,0,0.15);
   outline: 2px solid var(--turq);
 }
+
 .card h3      { font-size: 1.1rem; margin-bottom: 6px; color: var(--forrest); }
 .card .status { font-size: 0.8rem; font-weight: 600; margin: 4px 0; text-transform: uppercase; letter-spacing: 0.05em; }
 .card .level  { font-family: "gin", serif; font-size: 1.4rem; color: var(--brown); margin: 0; }
@@ -546,242 +548,175 @@ h2.river { margin-top: 4px; font-size: 1.3rem; opacity: 0.8; color: var(--forres
 .card.flood     .status { color: var(--coral); }
 
 .chart-card {
-  background: white; border-radius: 16px;
-  padding: 20px 16px; margin: 24px 0 40px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 16px;
+  margin: 24px 0 40px;
   box-shadow: var(--shadow);
 }
-.chart-container { position: relative; width: 100%; height: 300px; }
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
 #riverChart { width: 100% !important; height: 100% !important; }
 
-@media (min-width: 768px)  { .chart-container { height: 380px; }
-}
-@media (min-width: 1024px) { .chart-container { height: 480px; } .chart-card { padding: 28px; } }
+/* ---------------------------------------------- River Levels CSS End -----------------------------------------*/
 
-
-/*---------------------------------------------- River Levels CSS -----------------------------------------*/
-
-
-
-
-
-
-/*---------------------------------------------- Map CSS ---------------------------------------------------*/
-
-/* =========================================================
-   MAP PAGE
-========================================================= */
+/* ---------------------------------------------- Map CSS ---------------------------------------------------*/
 
 #map #title{
- background-image: url(../img/mapback428px.webp);
- background-repeat: no-repeat;
- max-width: 500px;
- height: 450px;
-  
+  background-image: url(../img/mapback428px.webp);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  height: 450px;
 }
 
 #map-canvas {
-  width: 100%; height: 350px;
+  width: 100%;
+  height: 350px;
   margin: 24px auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  background: #d8d3cc; display: block;
+  background: #d8d3cc;
+  display: block;
 }
 
 .map-section { padding: 0 0 20px; }
-h2.map { font-family: "gin", serif; color: var(--forrest); margin: 28px 0 0; }
 
-.map-link { text-align: center; margin: 12px 0 32px; }
+h2.map {
+  font-family: "gin", serif;
+  color: var(--forrest);
+  margin: 28px 0 0;
+}
+
+.map-link {
+  text-align: center;
+  margin: 12px 0 32px;
+}
+
 .map-link a {
-  color: var(--forrest); font-weight: 700; text-decoration: none;
-  font-size: 0.9rem; border-bottom: 2px solid transparent;
+  color: var(--forrest);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 2px solid transparent;
   transition: border-color var(--transition), color var(--transition);
 }
-.map-link a:hover { color: var(--turq); border-bottom-color: var(--turq); }
 
-@media (min-width: 768px)  { #map-canvas { height: 450px; } }
-@media (min-width: 1024px) { #map-canvas { height: 550px; max-width: 900px; } }
-
-
-/*---------------------------------------------- Map CSS ---------------------------------------------------*/
-
-
-
-
-/*---------------------------------------------- Canoe Form CSS ---------------------------------------------------*/
-body {
-  font-family: "navigo", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background: var(--taupe);
-  padding: 40px;
+.map-link a:hover {
+  color: var(--turq);
+  border-bottom-color: var(--turq);
 }
 
+/* ---------------------------------------------- Map CSS End ---------------------------------------------------*/
+
+/* ---------------------------------------------- Form CSS ---------------------------------------------------*/
+
+/* FIX: width changed from 400px to 100% — prevents overflow on screens narrower than ~440px */
 #canoe .form-container {
-max-width: 400px;
-width:400px;
-margin: auto;
-color:#000;
-background: var(--turq);
-padding: 25px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  color: #000;
+  background: var(--turq);
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-#cabin .form-container{
-max-width: 400px;
-width:400px;
-margin: auto;
-color:#000;
-background: var(--coral);
-padding: 25px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+#cabin .form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  color: #000;
+  background: var(--coral);
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 h2.form {
-margin-bottom: 20px;
-color:#000;
-text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: center;
 }
 
 label {
-display: block;
-margin-top: 15px;
-font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
+/* FIX: Added box-sizing: border-box so padding doesn't push fields beyond 100% width */
 input, select, button {
-width: 100%;
-padding: 10px;
-margin-top: 5px;
-border-radius: 6px;
-border: 1px solid #ccc;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-
-#cabin button{
+#cabin button {
   background-color: var(--brown);
-  color:var(--text);
+  color: var(--text);
 }
 
 #cabin button:hover {
-background: var(--turq);
+  background: var(--turq);
 }
 
-#cabin label{
-  color:var(--text);
+#cabin label {
+  color: var(--text);
 }
 
 button {
-margin-top: 20px;
-background: var(--forrest);
-color: white;
-font-weight: bold;
-cursor: pointer;
+  margin-top: 20px;
+  background: var(--forrest);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 button:hover {
-background: var(--coral);
+  background: var(--coral);
 }
 
 #liveTotal {
-margin-top: 15px;
-font-size: 18px;
-font-weight: bold;
-color: #2e7d32;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
 }
 
 #confirmationMessage {
-margin-top: 20px;
-padding: 12px;
-background: #e7fbe7;
-border: 1px solid #2e7d32;
-border-radius: 6px;
-display: none;
+  margin-top: 20px;
+  padding: 12px;
+  background: #e7fbe7;
+  border: 1px solid #2e7d32;
+  border-radius: 6px;
+  display: none;
 }
 
-/* Calendar styling tweaks */
 .flatpickr-day.available {
-background: #e7fbe7;
+  background: #e7fbe7;
 }
 
 .flatpickr-day.unavailable {
-background: #ffdddd;
-color: #999;
+  background: #ffdddd;
+  color: #999;
 }
 
-
-/*---------------------------------------------- Canoe Form CSS ---------------------------------------------------*/
-
-/*
-nav ul{
-    display:grid;
-    grid-template-columns: repeat(6, 1fr);
-    padding: 5px;
-  }
-
-
-
-
-/* canoe */
-/* river levels */
-/* map */
-/*
-
-
-img.title{
-  grid-area: img;
-}
-
-
-
-#home .title-content{
-  grid-area: heading;
-}
-
-#home .title-content {
-  text-align:center;
-  color: var(--text);
-  padding:10px;  
-}
-
-#mission{
-  padding: 10px;
- margin: 10px;
- text-align: center;
- grid-area: mission;
-}
-
-#story{
-padding: 10px;
- margin: 10px;
- text-align: center;
- grid-area: story;
-}
-
-#commitment{
-padding: 20px;
- margin: 10px;
- text-align: center;
- grid-area: commitment;
-}
-
-#why{
-padding: 20px;
- margin: 10px;
- text-align: center;
- grid-area: why;
-}
-
-footer{
-  grid-area: footer;
-}
-}
+/* ---------------------------------------------- Form CSS End ---------------------------------------------------*/
 
 /* =========================================================
-   RESPONSIVE MEDIA QUERIES (CLEAN FIXED VERSION)
+   RESPONSIVE MEDIA QUERIES
 ========================================================= */
 
 /* =========================
-   HOME BASE FIXES
+   TABLET (768px+)
 ========================= */
 @media screen and (min-width: 768px) {
 
@@ -791,8 +726,10 @@ footer{
 
   .container {
     max-width: 900px;
+    padding: 0; /* reset mobile padding at tablet+ */
   }
 
+  /* Home */
   #home #title {
     background-image: url(https://kacolter.github.io/buffalo-river/assets/img/homeback1200px.webp);
     max-width: 100%;
@@ -814,13 +751,8 @@ footer{
     margin-left: 35px;
     margin-right: 35px;
   }
-}
 
-/* =========================
-   CANOE + CABIN + FOOTER FIXES
-========================= */
-@media screen and (min-width: 768px) {
-
+  /* Cabin */
   #cabin-imgs {
     display: flex;
     flex-direction: row;
@@ -831,6 +763,7 @@ footer{
     max-width: 100%;
   }
 
+  /* Canoe */
   #canoe #title {
     background-image: url(../img/canoeback1200px.webp);
     max-width: 100%;
@@ -841,10 +774,20 @@ footer{
     max-width: 100%;
   }
 
+  /* Footer */
   footer h5,
   address,
   #phone {
     margin: 35px;
+  }
+
+  /* Chart & Map */
+  .chart-container {
+    height: 380px;
+  }
+
+  #map-canvas {
+    height: 450px;
   }
 }
 
@@ -872,23 +815,16 @@ footer{
 }
 
 /* =========================
-   CHART + MAP + RIVER FIXES
+   LARGE DESKTOP (1024px+)
 ========================= */
-@media screen and (min-width: 768px) {
-
-  .chart-container {
-    height: 380px;
-  }
-
-  #map-canvas {
-    height: 450px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
 
   .chart-container {
     height: 480px;
+  }
+
+  .chart-card {
+    padding: 28px;
   }
 
   #map-canvas {
